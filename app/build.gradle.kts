@@ -28,7 +28,7 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(kotlin("stdlib-jdk7", KotlinCompilerVersion.VERSION))
-    implementation("com.android.support:appcompat-v7:28.0.0")
+    implementation("androidx.appcompat:appcompat:1.0.2")
 
     //Constraint layout
     implementation("androidx.constraintlayout:constraintlayout:2.0.0-alpha3")
