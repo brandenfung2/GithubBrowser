@@ -1,4 +1,4 @@
-[![travis status](https://travis-ci.com/JanStoltman/GithubBrowser.svg?branch=master)](https://travis-ci.org/vadret/android)
+[![travis status](https://travis-ci.com/JanStoltman/GithubBrowser.svg?branch=master)](https://codecov.io/gh/JanStoltman/GithubBrowser)
 
 # GithubBrowser
 
