@@ -22,10 +22,11 @@
     </FrameLayout>
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/mainNavigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
+        android:fitsSystemWindows="false"
         app:headerLayout="@layout/main_nav_header"
         app:menu="@menu/main_nav_menu" />
 

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GithubBrowser</string>
+    <string name="descr_user_profile_picture">User\'s profile picture</string>
+    <string name="log_in">Log in</string>
 </resources>

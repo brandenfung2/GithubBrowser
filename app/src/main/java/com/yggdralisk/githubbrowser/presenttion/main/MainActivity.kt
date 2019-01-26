@@ -6,12 +6,21 @@ import com.yggdralisk.githubbrowser.R
 import com.yggdralisk.githubbrowser.presenttion.base.BaseDrawerActivity
 import com.yggdralisk.githubbrowser.util.extension.toNullable
 import kotlinx.android.synthetic.main.activity_main.*
+import timber.log.Timber
 
 class MainActivity : BaseDrawerActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupSupportActionBar()
+        mainNavigationView.setNavigationItemSelectedListener {
+            Timber.d("Menu item selected")
+            false
+        }
+
+        mainNavigationView.getHeaderView(0)?.setOnClickListener {
+            Timber.d("Header click")
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem?) = when (item?.itemId) {

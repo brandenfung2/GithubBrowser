@@ -8,4 +8,13 @@
         <item name="titleTextColor">@color/colorPrimary</item>
         <item name="android:statusBarColor">@color/colorAccent</item>
     </style>
+
+    <style name="GithubText" parent="Base.Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GithubText.Label">
+        <item name="android:textSize">@dimen/textLabel</item>
+    </style>
 </resources>

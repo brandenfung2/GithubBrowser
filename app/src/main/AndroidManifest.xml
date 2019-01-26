@@ -2,6 +2,7 @@
     package="com.yggdralisk.githubbrowser">
 
     <application
+        android:name=".GithubBrowserApplication"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
