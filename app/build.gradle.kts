@@ -31,6 +31,7 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(kotlin("stdlib-jdk7", KotlinCompilerVersion.VERSION))
     implementation("androidx.appcompat:appcompat:1.0.2")
+    implementation("com.google.android.material:material:1.1.0-alpha02")
 
     //Constraint layout
     implementation("androidx.constraintlayout:constraintlayout:2.0.0-alpha3")
@@ -46,6 +47,9 @@ dependencies {
     //Gson
     implementation("com.google.code.gson:gson:2.8.5")
     implementation("com.squareup.retrofit2:converter-gson:2.4.0")
+
+    //Timber
+    implementation("com.jakewharton.timber:timber:4.7.1")
 
     //Tests
     testImplementation("junit:junit:4.12")
