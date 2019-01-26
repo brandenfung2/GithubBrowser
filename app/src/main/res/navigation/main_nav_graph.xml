@@ -7,7 +7,7 @@
 
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.yggdralisk.githubbrowser.MainActivity"
+        android:name="com.yggdralisk.githubbrowser.presenttion.main.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
 </navigation>
