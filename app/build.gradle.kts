@@ -26,12 +26,18 @@ android {
 }
 
 dependencies {
+    val navVersion = "1.0.0-alpha09"
+
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(kotlin("stdlib-jdk7", KotlinCompilerVersion.VERSION))
     implementation("androidx.appcompat:appcompat:1.0.2")
 
     //Constraint layout
     implementation("androidx.constraintlayout:constraintlayout:2.0.0-alpha3")
+
+    //Navigation
+    implementation("android.arch.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("android.arch.navigation:navigation-ui-ktx:$navVersion")
 
     //Tests
     testImplementation("junit:junit:4.12")
