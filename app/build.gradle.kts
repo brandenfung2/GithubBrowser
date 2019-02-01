@@ -62,6 +62,7 @@ dependencies {
     //RxJava
     implementation("io.reactivex.rxjava2:rxandroid:2.1.0")
     implementation("io.reactivex.rxjava2:rxjava:2.2.6")
+    implementation("io.reactivex.rxjava2:rxkotlin:2.3.0")
 
     //Tests
     testImplementation("junit:junit:4.12")
