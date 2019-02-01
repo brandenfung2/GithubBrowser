@@ -8,6 +8,6 @@ import retrofit2.http.Header
  * https://developer.github.com/v3/auth/#basic-authentication
  */
 interface GithubBaseAuthService {
-    @GET
+    @GET("user")
     fun getUser(@Header(AUTHORIZATION) basicAuthB64: String)
 }

@@ -14,6 +14,10 @@ class MainActivity : DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupSupportActionBar()
+        setupDrawerClickListeners()
+    }
+
+    private fun setupDrawerClickListeners() {
         mainNavigationView.setNavigationItemSelectedListener {
             Timber.d("Menu item selected")
             false
