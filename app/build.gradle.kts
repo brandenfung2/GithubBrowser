@@ -32,7 +32,7 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(kotlin("stdlib-jdk7", KotlinCompilerVersion.VERSION))
     implementation("androidx.appcompat:appcompat:1.0.2")
-    implementation("com.google.android.material:material:1.1.0-alpha02")
+    implementation("com.google.android.material:material:1.1.0-alpha03")
 
     //Constraint layout
     implementation("androidx.constraintlayout:constraintlayout:2.0.0-alpha3")
