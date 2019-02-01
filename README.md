@@ -3,4 +3,6 @@
 # GithubBrowser
 
 ## Libraries and plugins
-* [gradle-code-quality-tools-plugin](https://github.com/vanniktech/gradle-code-quality-tools-plugin)
+* [Dagger2](https://google.github.io/dagger/)
+* [RxJava2](https://github.com/ReactiveX/RxJava)
+* [Retrofit](https://square.github.io/retrofit/)
