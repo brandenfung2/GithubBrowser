@@ -44,6 +44,7 @@ dependencies {
     //Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.5.0")
     implementation("com.squareup.okhttp3:logging-interceptor:3.11.0")
+    implementation("com.squareup.retrofit2:adapter-rxjava:2.5.0")
 
     //Gson
     implementation("com.google.code.gson:gson:2.8.5")
@@ -57,6 +58,10 @@ dependencies {
     implementation("com.google.dagger:dagger-android-support:$daggerVersion")
     kapt("com.google.dagger:dagger-android-processor:$daggerVersion")
     kapt("com.google.dagger:dagger-compiler:$daggerVersion")
+
+    //RxJava
+    implementation("io.reactivex.rxjava2:rxandroid:2.1.0")
+    implementation("io.reactivex.rxjava2:rxjava:2.2.6")
 
     //Tests
     testImplementation("junit:junit:4.12")
