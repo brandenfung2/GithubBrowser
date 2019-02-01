@@ -1,15 +1,10 @@
 package com.yggdralisk.githubbrowser
 
-import android.app.Application
-import timber.log.Timber.DebugTree
-import timber.log.Timber.plant
+import com.yggdralisk.githubbrowser.di.component.DaggerGithubApplicationComponent
+import dagger.android.AndroidInjector
+import dagger.android.DaggerApplication
 
-class GithubBrowserApplication : Application() {
-    override fun onCreate() {
-        super.onCreate()
-
-        if (BuildConfig.DEBUG) {
-            plant(DebugTree())
-        }
-    }
+class GithubBrowserApplication : DaggerApplication() {
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> =
+        DaggerGithubApplicationComponent.builder().create(this)
 }

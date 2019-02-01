@@ -2,13 +2,14 @@ package com.yggdralisk.githubbrowser.presenttion.main
 
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.core.view.GravityCompat
 import com.yggdralisk.githubbrowser.R
-import com.yggdralisk.githubbrowser.presenttion.base.BaseDrawerActivity
-import com.yggdralisk.githubbrowser.util.extension.toNullable
+import com.yggdralisk.githubbrowser.util.extension.asNullable
+import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import timber.log.Timber
 
-class MainActivity : BaseDrawerActivity() {
+class MainActivity : DaggerAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,7 +33,10 @@ class MainActivity : BaseDrawerActivity() {
         else -> super.onOptionsItemSelected(item)
     }
 
-    override fun getDrawerLayout() = mainDrawerLayout.toNullable()
+    private fun openDrawer(gravity: Int = GravityCompat.START) =
+        getDrawerLayout()?.openDrawer(gravity)
+
+    private fun getDrawerLayout() = mainDrawerLayout.asNullable()
 
     private fun setupSupportActionBar() {
         setSupportActionBar(toolbar)
