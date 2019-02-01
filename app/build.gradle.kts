@@ -27,6 +27,7 @@ android {
 
 dependencies {
     val navVersion = "1.0.0-alpha09"
+    val daggerVersion = "2.20"
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(kotlin("stdlib-jdk7", KotlinCompilerVersion.VERSION))
@@ -50,6 +51,12 @@ dependencies {
 
     //Timber
     implementation("com.jakewharton.timber:timber:4.7.1")
+
+    //Dagger
+    implementation("com.google.dagger:dagger-android:$daggerVersion")
+    implementation("com.google.dagger:dagger-android-support:$daggerVersion")
+    kapt("com.google.dagger:dagger-android-processor:$daggerVersion")
+    kapt("com.google.dagger:dagger-compiler:$daggerVersion")
 
     //Tests
     testImplementation("junit:junit:4.12")

@@ -87,3 +87,21 @@
 -keep class * implements com.google.gson.JsonSerializer
 -keep class * implements com.google.gson.JsonDeserializer
 # End Gson
+
+# Dagger
+-keep class com.google.errorprone.annotations.** { *; }
+-dontwarn com.google.errorprone.annotations.**
+
+-dontwarn dagger.internal.codegen.**
+-keepclassmembers,allowobfuscation class * {
+    @javax.inject.* *;
+    @dagger.* *;
+    <init>();
+}
+
+-keep class dagger.* { *; }
+-keep class javax.inject.* { *; }
+-keep class * extends dagger.internal.Binding
+-keep class * extends dagger.internal.ModuleAdapter
+-keep class * extends dagger.internal.StaticInjection
+# End Dagger
