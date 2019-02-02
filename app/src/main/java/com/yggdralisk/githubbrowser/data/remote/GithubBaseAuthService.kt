@@ -1,5 +1,6 @@
 package com.yggdralisk.githubbrowser.data.remote
 
+import com.yggdralisk.githubbrowser.util.consts.AUTHORIZATION
 import retrofit2.http.GET
 import retrofit2.http.Header
 
