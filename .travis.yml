@@ -26,9 +26,7 @@ before_install:
 - chmod +x gradlew
 
 script:
-- "./gradlew clean build"
-- "./gradlew tasks"
-- "./gradlew assembleGithub"
+- "./gradlew build check"
 - "./gradlew test jacocoTestReport"
 
 before_cache:

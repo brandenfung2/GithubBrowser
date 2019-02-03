@@ -65,6 +65,7 @@ dependencies {
     implementation("com.google.dagger:dagger-android-support:$daggerVersion")
     kapt("com.google.dagger:dagger-android-processor:$daggerVersion")
     kapt("com.google.dagger:dagger-compiler:$daggerVersion")
+    implementation("javax.annotation:jsr250-api:1.0")
 
     //RxJava
     implementation("io.reactivex.rxjava2:rxandroid:2.1.0")
