@@ -8,10 +8,15 @@ import com.yggdralisk.githubbrowser.util.extension.asNullable
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import timber.log.Timber
+import javax.inject.Inject
 
-class MainActivity : DaggerAppCompatActivity(), MainContract.MainView {
+class MainActivity : DaggerAppCompatActivity(), MainContract.View {
+    @Inject
+    lateinit var presenter: MainPresenter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        presenter.onAttachView(this)
         setContentView(R.layout.activity_main)
         setupSupportActionBar()
         setupDrawerClickListeners()

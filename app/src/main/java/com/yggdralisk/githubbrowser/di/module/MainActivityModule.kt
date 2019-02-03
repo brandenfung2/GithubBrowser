@@ -8,5 +8,5 @@ import dagger.Module
 @Module
 abstract class MainActivityModule {
         @Binds
-        abstract fun provideMainView(activity: MainActivity): MainContract.MainView
+        abstract fun provideMainView(activity: MainActivity): MainContract.View
 }

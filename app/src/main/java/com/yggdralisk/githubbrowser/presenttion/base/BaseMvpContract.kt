@@ -1,10 +1,13 @@
 package com.yggdralisk.githubbrowser.presenttion.base
 
 interface BaseMvpContract {
-    interface BaseMvpView {}
+    interface View {}
 
-    interface BaseMvpPresenter {
-        fun onAttachView(view: BaseMvpView)
-        fun onDetachView(view: BaseMvpView)
+    interface Presenter<T : View> {
+        fun onAttachView(view: T)
+
+        fun onDetachView(view: T)
+
+        fun isAttached(): Boolean
     }
 }
