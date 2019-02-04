@@ -1,8 +1,8 @@
 package com.yggdralisk.githubbrowser.di.module
 
 import com.yggdralisk.githubbrowser.BuildConfig
-import com.yggdralisk.githubbrowser.data.remote.BASE_URL
 import com.yggdralisk.githubbrowser.data.remote.GithubBaseAuthService
+import com.yggdralisk.githubbrowser.util.consts.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
