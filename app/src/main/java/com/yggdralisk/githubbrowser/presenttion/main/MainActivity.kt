@@ -6,11 +6,11 @@ import androidx.core.view.GravityCompat
 import com.yggdralisk.githubbrowser.R
 import com.yggdralisk.githubbrowser.util.extension.asNullable
 import dagger.android.support.DaggerAppCompatActivity
+import dagger.android.support.HasSupportFragmentInjector
 import kotlinx.android.synthetic.main.activity_main.*
-import timber.log.Timber
 import javax.inject.Inject
 
-class MainActivity : DaggerAppCompatActivity(), MainContract.View {
+class MainActivity : DaggerAppCompatActivity(), MainContract.View, HasSupportFragmentInjector {
     @Inject
     lateinit var presenter: MainPresenter
 
@@ -22,14 +22,21 @@ class MainActivity : DaggerAppCompatActivity(), MainContract.View {
         setupDrawerClickListeners()
     }
 
+    private fun setupSupportActionBar() {
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeAsUpIndicator(R.drawable.ic_menu)
+        }
+    }
+
     private fun setupDrawerClickListeners() {
         mainNavigationView.setNavigationItemSelectedListener {
-            Timber.d("Menu item selected")
-            false
+            presenter.onDrawerItemClick(it)
         }
 
         mainNavigationView.getHeaderView(0)?.setOnClickListener {
-            Timber.d("Header click")
+            presenter.onDrawerHeaderClick(it)
         }
     }
 
@@ -45,13 +52,6 @@ class MainActivity : DaggerAppCompatActivity(), MainContract.View {
     private fun openDrawer(gravity: Int = GravityCompat.START) =
         getDrawerLayout()?.openDrawer(gravity)
 
-    private fun getDrawerLayout() = mainDrawerLayout.asNullable()
-
-    private fun setupSupportActionBar() {
-        setSupportActionBar(toolbar)
-        supportActionBar?.apply {
-            setDisplayHomeAsUpEnabled(true)
-            setHomeAsUpIndicator(R.drawable.ic_menu)
-        }
-    }
+    private fun getDrawerLayout() =
+        mainDrawerLayout.asNullable()
 }
